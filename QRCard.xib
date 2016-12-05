@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCard" customModule="WiFriend" customModuleProvider="target">
+            <connections>
+                <outlet property="contact" destination="U38-s9-4Ei" id="Zg9-Hn-zXa"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="KX8-fg-a65"/>
+                <outlet property="network" destination="haG-Yq-sly" id="4SR-Ec-hwm"/>
+                <outlet property="qrImage" destination="SQJ-Uw-9Tr" id="GhJ-Zm-Su3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-Sf-h6L">
+                    <rect key="frame" x="18" y="18" width="339" height="75"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="9qG-SM-qYT">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="9qG-SM-qYT" secondAttribute="height" multiplier="1:1" id="2MT-gU-zLN"/>
+                                <constraint firstAttribute="height" constant="75" id="3BY-xK-Q9M"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nxl-ED-XPg">
+                            <rect key="frame" x="90" y="0.0" width="249" height="75"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haG-Yq-sly">
+                                    <rect key="frame" x="0.0" y="0.0" width="249" height="37.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U38-s9-4Ei">
+                                    <rect key="frame" x="0.0" y="37.5" width="249" height="37.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="6BE-4L-1uA"/>
+                        <constraint firstAttribute="trailing" secondItem="nxl-ED-XPg" secondAttribute="trailing" id="jcG-Nj-Yej"/>
+                        <constraint firstAttribute="bottom" secondItem="nxl-ED-XPg" secondAttribute="bottom" id="tTl-tb-eHN"/>
+                        <constraint firstItem="nxl-ED-XPg" firstAttribute="top" secondItem="bgJ-Sf-h6L" secondAttribute="top" id="zlf-Gt-Cld"/>
+                    </constraints>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQJ-Uw-9Tr">
+                    <rect key="frame" x="18" y="103" width="339" height="339"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="SQJ-Uw-9Tr" secondAttribute="height" multiplier="1:1" id="Yvf-4s-UOj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the QR code to add my network and contact" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-RJ-irb">
+                    <rect key="frame" x="18" y="615.5" width="339" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SQJ-Uw-9Tr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="10" id="8Ti-yH-L3f"/>
+                <constraint firstAttribute="trailingMargin" secondItem="bgJ-Sf-h6L" secondAttribute="trailing" constant="10" id="HgS-3v-OTy"/>
+                <constraint firstItem="QtK-RJ-irb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="10" id="Ig1-bR-OOH"/>
+                <constraint firstAttribute="trailingMargin" secondItem="SQJ-Uw-9Tr" secondAttribute="trailing" constant="10" id="NNh-Vx-iEp"/>
+                <constraint firstAttribute="bottomMargin" secondItem="QtK-RJ-irb" secondAttribute="bottom" constant="5" id="aoc-rK-cB3"/>
+                <constraint firstAttribute="trailingMargin" secondItem="QtK-RJ-irb" secondAttribute="trailing" constant="10" id="iWe-Zd-0e3"/>
+                <constraint firstItem="bgJ-Sf-h6L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="10" id="vGa-RH-96R"/>
+                <constraint firstItem="SQJ-Uw-9Tr" firstAttribute="top" secondItem="bgJ-Sf-h6L" secondAttribute="bottom" constant="10" id="wCU-Hb-IOj"/>
+                <constraint firstItem="SQJ-Uw-9Tr" firstAttribute="top" secondItem="bgJ-Sf-h6L" secondAttribute="bottom" constant="10" id="wvd-n0-8l0"/>
+                <constraint firstItem="bgJ-Sf-h6L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="10" id="xUr-94-gGd"/>
+            </constraints>
+            <point key="canvasLocation" x="-184.5" y="-85.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar" width="50" height="50"/>
+    </resources>
+</document>
